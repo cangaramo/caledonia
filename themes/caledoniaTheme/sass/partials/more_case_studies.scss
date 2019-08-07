@@ -1,0 +1,60 @@
+@import 'variables.scss';
+
+.more-case-studies {
+    background: linear-gradient($blue 80%, white 70%);
+
+    @media (min-width:992px) {
+        background: linear-gradient($blue 40%, white 30%);
+    }
+
+    h2 {
+        color: white;
+        margin-bottom: 40px;
+        font-weight: 300;
+        font-size: 30px;
+    }
+
+    .box {
+
+        background: white;
+        box-shadow: -1px -1px 15px 0px rgba(0,0,0,0.2);
+        position: relative;
+        height: 550px;
+
+        @media (min-width:992px) {
+            height: 640px;
+        }
+
+        .thumbnail-image {
+            height: 220px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            @media (min-width: 992px) {
+                height: 180px;
+            }
+        }
+
+        p {
+            font-size: 13px;
+        }
+
+        h4 {
+            font-size: 20px;
+            color: $dark_purple;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .link {
+            color: $dark_gray !important;
+            position: absolute;
+            bottom: 22px;
+        }
+
+    }
+    
+}

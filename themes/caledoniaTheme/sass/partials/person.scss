@@ -1,0 +1,34 @@
+@import "variables.scss";
+
+.person{
+    height: 280px;
+    position: relative;
+
+    .info {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0,0,53,0.7);
+        width: 100%;
+        color: white;
+        padding: 15px 15px;
+
+        p {
+            margin: 0;
+            font-size: 13px;
+        }
+
+        .role {
+            font-style: italic;
+        }
+    }
+
+    &:hover {
+
+        cursor: pointer;
+
+        .info {
+            background: $green;
+            color: $dark_blue;
+        }
+    }
+}

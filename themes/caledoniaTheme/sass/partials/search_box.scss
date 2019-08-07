@@ -1,0 +1,77 @@
+@import "variables.scss";
+
+.search-box {
+    display: none;
+    background: $dark_blue;
+    position: absolute;
+    width: 100%;
+    z-index: 11;
+    height: 600px;
+
+    @media (min-width: 992px) {
+        height: 390px;
+    }
+
+    .container, .close-window{
+        display: none;
+    }
+
+    img {
+        height: 45px;
+    }
+
+    input[type='text']{
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255,255,255,0.4);
+        color: white;
+        font-size: 22px;
+        padding-bottom: 4px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    ::-webkit-input-placeholder {
+        color: rgba(255,255,255,0.8);
+    }
+
+    .results-container {
+        .result {
+            color: white;
+            padding: 6px 0;
+            font-size: 14px;
+
+            &:hover {
+                text-decoration: none;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .close-window {
+        position: absolute;
+        bottom: 20px;
+
+        a {
+            color: white;
+            font-size: 14px;
+            text-transform: uppercase;
+
+            &:hover {
+                color: white;
+                opacity: 0.7;
+                cursor: pointer;
+            }
+        }
+
+        img {
+            height: 16px;
+            margin-right: 9px;
+            vertical-align: sub;
+        }
+
+    }
+}

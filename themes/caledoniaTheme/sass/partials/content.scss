@@ -1,0 +1,57 @@
+@import 'variables.scss';
+
+/* Content */
+.content {
+    hr {
+        width: 55px;
+        margin: 0;
+        margin-bottom: 20px;
+        border-top: 6px solid $green;
+    }
+
+    .title {
+        color: $dark_purple;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+
+    a {
+        color: $dark_gray;
+        
+        &:hover {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+.content-article {
+    hr {
+        width: 55px;
+        margin: 0;
+        margin-bottom: 13px;
+        border-top: 8px solid $green;
+    }
+
+    .title {
+        font-weight: 500;
+        color: $dark_purple;
+        margin-bottom: 3px;
+    }
+
+    .equity {
+        font-size: 50px;
+        font-weight: 400;
+        margin-top: 20px;
+        color: $purple;
+    }
+
+    .copy-image {
+        margin-top:50px;
+    }
+}

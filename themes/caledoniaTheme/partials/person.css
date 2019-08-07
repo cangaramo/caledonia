@@ -1,0 +1,1 @@
+.person{height:280px;position:relative}.person .info{position:absolute;bottom:0;background:rgba(0,0,53,0.7);width:100%;color:white;padding:15px 15px}.person .info p{margin:0;font-size:13px}.person .info .role{font-style:italic}.person:hover{cursor:pointer}.person:hover .info{background:#8FCA45;color:#002868}

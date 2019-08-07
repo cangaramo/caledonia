@@ -1,0 +1,81 @@
+@import "variables.scss";
+
+.project{
+    height: 280px;
+    position: relative;
+
+    img {
+        -webkit-filter: grayscale(100%); 
+        filter: grayscale(100%);
+
+        &:hover {
+            -webkit-filter: none;
+            filter: none;
+        }
+    }
+
+    .green-bar {
+        background: transparent;
+        height: 10px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &:hover {
+
+        cursor: pointer;
+
+        .green-bar {
+            background: $green;
+        }
+    }
+    
+}
+
+#historical-projects {
+    display: none;
+
+    .project:hover {
+        cursor: auto;
+    
+        .green-bar {
+            background: transparent;
+        }
+    }
+}
+
+.dropdown-status, .view-cs, .view-historical{
+    background-color: white;
+    border: 1px solid $green;
+    -webkit-appearance: none;
+    border-radius: 0;
+    width: 170px;
+    margin: 0px 8px;
+    color: $dark_gray !important;
+    text-align: left;
+    font-size: 13px;
+    padding: 7px 15px;
+    cursor: pointer;
+
+    &:hover {
+       outline: $green solid 1px;
+       text-decoration: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.view-historical {
+    width: 295px;
+}
+
+.dropdown-status, .view-historical {
+    background-image: url('resources/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position-x: 93%;
+    background-position-y: 9px;
+}

@@ -1,0 +1,157 @@
+@import "variables.scss";
+
+.grid {
+    .box {
+        height: 400px;
+
+        .introduction {
+            color: white;
+            margin: 0;
+        }
+    }
+
+    .linked-box  {
+        cursor: pointer;
+
+        .zoom {
+            transition: transform .4s;
+        }
+
+        &:hover {
+            .zoom {
+                transform: scale(1.05); 
+                transition: transform .4s;
+            }
+        }
+    }
+
+    .bigger{
+
+        height: 200px !important;
+
+        @media (min-width: 380px) {
+            height: 220px !important;
+        }
+
+        @media (min-width: 420px) {
+            height: 230px !important;
+        }
+
+        @media (min-width: 460px) {
+            height: 250px !important;
+        }
+
+        @media (min-width: 520px) {
+            height: 290px !important;
+        }
+
+        @media (min-width: 768px) {
+            height:390px !important;
+        }
+
+        @media (min-width: 992px) {
+            height: 355px !important;
+        }
+
+        @media (min-width: 1200px) {
+            height: 420px !important;
+        }
+    }
+    .small-numbers {
+        height: 300px;
+    }
+}
+
+/* Quote */
+.grid .quote-box {
+    background: $purple;
+    color: white;
+    font-style: italic;
+
+    height: 290px !important;
+
+    @media (min-width:576px) {
+        height: 290px;
+    }
+
+    @media (min-width: 768px) {
+        height:290px !important;
+    }
+
+    @media (min-width: 992px) {
+        height: 355px !important;
+    }
+
+    @media (min-width: 1200px) {
+        height: 420px !important;
+    }
+
+    .quote {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+    }
+
+    .author {
+        font-size: 12px;
+    }
+}
+
+/* Play film */
+
+.overview {
+
+    font-size: 1.4rem;
+
+    @media (min-width: 576px) {
+        font-size: 2rem;
+    }
+
+}
+.play-film {
+    height:50px;
+
+    &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+}
+
+/* Numbers */
+.number{
+
+    background: #e0eff9;
+    font-size: 30px;
+    color: $purple;
+    height: 250px !important;
+
+    @media (min-width:768px) {
+        height: 400px !important;
+    }
+
+    .counter {
+        font-size: 80px;
+    }
+
+    .description {
+        color: $dark_gray;
+        font-style: italic;
+    }
+}
+
+.numbers .number {
+
+    height: 250px !important;
+
+    @media (min-width:768px) {
+        height: 330px !important;
+    }
+}
+
+.small-number {
+
+    .counter {
+        font-size: 60px;
+    }
+}
+
