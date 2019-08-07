@@ -18,7 +18,7 @@
                 <div>
                     <img class="my-3 play-film open-modal-video" data-vimeo="<?php echo $vimeo_id ?>" data-file="<?php echo $file ?>" src="<?php echo get_bloginfo('template_directory'); ?>/resources/play.svg">
                     <h2 class="mb-4 pb-3 color-white">Overview film</h2>
-                    <a class="link open-modal-video" data-vimeo="<?php echo $vimeo_id ?>">Watch film</a>
+                    <a class="link open-modal-video" data-vimeo="<?php echo $vimeo_id ?>" data-file="<?php echo $file ?>">Watch film</a>
                 </div>
              </div>
         </div> 
