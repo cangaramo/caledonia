@@ -178,3 +178,45 @@ p {
 }
 
 
+.text-grid{
+    .box {
+        background: #e0eff9;
+        height: 190px;
+
+        hr {
+            margin: 15px 0 25px 0;
+            width: 100px;
+        }
+
+        p {
+            color: $purple;
+            font-size: 19px;
+            font-weight: 500;
+            letter-spacing: 0.09px;
+            line-height: 28px;
+        }
+    }
+}
+
+.text-grid-icons{
+    .box {
+        height: 180px;
+
+        img {
+            height: 45px;
+        }
+
+        hr {
+            margin: 15px 0 15px 0;
+            width: 80px;
+        }
+
+        p {
+            color: $purple;
+            font-size: 19px;
+            font-weight: 500;
+            letter-spacing: 0.09px;
+            line-height: 28px;
+        }
+    }
+}
