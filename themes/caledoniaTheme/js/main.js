@@ -398,6 +398,11 @@ $( document ).ready(function() {
 
 });
 
+window.addEventListener("scroll", function (event) {
+
+    checkChartPosition();
+});
+
 /* Redirect open modal */
 $(window).on('hashchange', function(e){
     url = window.location.href;
@@ -738,4 +743,101 @@ function initMap() {
         animation: google.maps.Animation.DROP,
         icon: icon_path
     });
+}
+
+
+/* Chart */
+
+function isScrolledIntoView(elem){
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+  
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+  
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+function checkChartPosition () {
+
+    element =  $("#chart");
+    visible = isScrolledIntoView(element);
+        
+    if (visible ) {
+
+        console.log("visible");
+
+        if ( $('#chart').children().length > 0 ) {
+        }
+        else {
+            console.log("load chart");
+            LoadChart ();
+        }
+    }
+}
+
+function LoadChart () {
+    var width = 260,
+    height = 260,
+    offset = 0,
+    radius = Math.min(width, height) / 2;
+    
+    var color = d3.scale.ordinal()
+        .range(["#00205c", "#7a7a7b", "#9dc41a", "#7184af", "#853479", "#009fe3", "#611445", "#d3d3d3"]);
+
+    var arc = d3.svg.arc()
+        .outerRadius(radius - 15)
+        .innerRadius(radius - 45);
+
+    var pie = d3.layout.pie()
+        .sort(null)
+       // .startAngle(1.1*Math.PI)
+       // .endAngle(3.1*Math.PI)
+        .value(function(d) { return d.percentage; });
+    
+    var data = [
+      {sector: '1', percentage: 29},
+      {sector:'2', percentage: 27},
+      {sector: '3', percentage: 17},
+      {sector: '4', percentage: 17},
+      {sector: '5', percentage: 4},
+      {sector: '6', percentage: 3},
+      {sector: '7', percentage: 2},
+      {sector: '8', percentage: 1}
+    ];
+    
+    var svg = d3.select("#chart").append("svg")
+        .attr("id", "chart")
+        .attr("width", width + offset)
+        .attr("height", height + offset)
+        .attr('viewBox', '0 0 ' + width + offset + ''+ width + offset +'')
+        .attr('perserveAspectRatio', 'xMinYMid')
+        .append("g")
+        .attr("transform", "translate(" + (width+offset) / 2 + "," + (height + offset) / 2 + ")");
+    
+    var g = svg.selectAll(".arc")
+        .data(pie(data))
+        .enter().append("g")
+        .attr("class", "arc");
+    
+    g.append("path")
+        .style("fill", function(d) { return color(d.data.sector); })
+        .transition().delay(function(d, i) { return i * 500; }).duration(500)
+        .attrTween('d', function(d) {
+            var i = d3.interpolate(d.startAngle+0.1, d.endAngle);
+            return function(t) {
+               d.endAngle = i(t);
+            return arc(d);
+        };
+    });
+
+
+    var aspect = width / height,
+    chart = $("#chart");
+    
+     data.forEach(function(d) {
+            d.songs = +d.songs;
+    });
+
+
 }

@@ -149,7 +149,7 @@
                         
                         <?php endif; ?>
 
-                        <?php if ($index == 2 ): ?>
+                        <?php if ($index == 3 ): ?>
                             <a class="d-none d-lg-block" href="<?php echo home_url(); ?>"><img src="<?php echo get_bloginfo('template_directory'); ?>/resources/caledonia.svg" alt="Logo"></a>
                         <?php endif; ?>
 
@@ -169,9 +169,5 @@
 </header>
 
 
-<?php require 'parts/part-search.php';
-
-    
-    
-
+<?php require 'parts/part-search.php'; ?>
 

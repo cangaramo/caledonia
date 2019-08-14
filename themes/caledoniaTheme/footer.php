@@ -54,6 +54,9 @@ $menuitems = wp_get_nav_menu_items( $menu->term_id, array( 'order' => 'DESC' ) )
 <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
 
+<!-- D3 -->
+<script src="https://d3js.org/d3.v3.min.js"> </script>
+
 <!-- Vimeo -->
 <script src="https://player.vimeo.com/api/player.js"></script>
 
