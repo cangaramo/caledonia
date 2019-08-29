@@ -5,6 +5,7 @@
     $title = get_the_title();
     $id = get_the_ID();
     $banner_image = $values['banner_image'];
+    $vimeo_id = $values['vimeo_id'];
     $description = $values['description'];
     $investment_thesis = $values['investment_thesis'];
     $type_investment = $values['type_of_investment'];
@@ -18,7 +19,21 @@
         <!-- Banner -->
         <?php if ($banner_image): ?>
             <div class="banner-big">
-                <div class="w-100 h-100 bg-image" style="background-image: url(<?php echo $banner_image ?>)"></div>
+                <div class="w-100 h-100 bg-image" style="background-image: url(<?php echo $banner_image ?>)">
+
+                    <?php if ($vimeo_id): ?>
+                        <div class="w-100 h-100" style="background:rgba(0,0,0,0.2)">
+                            <div class="h-100 d-flex justify-content-center align-items-center text-center">
+                                <div class="pt-5">
+                                    <img class="my-3 play-film open-modal-video" data-vimeo="<?php echo $vimeo_id ?>" src="<?php echo get_bloginfo('template_directory'); ?>/resources/play.svg">
+                                    <h2 class="mb-4 pb-3 color-white">Overview film</h2>
+                                    <a class="link open-modal-video" data-vimeo="<?php echo $vimeo_id ?>" >Watch film</a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif; ?> 
+
+                </div>
             </div>
         <?php else: ?>
             <div style="height: 200px"></div>
