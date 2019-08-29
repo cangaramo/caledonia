@@ -19,7 +19,8 @@
                         <!-- Video -->
                         <div class="video">
                             <div class='embed-container'>
-                                <iframe src='https://player.vimeo.com/video/<?php echo $item['video_id'] ?>?title=0&byline=0&portrait=0' allow="autoplay" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                <!-- ?title=0&byline=0&portrait=0 -->
+                                <iframe src='https://player.vimeo.com/video/<?php echo $item['video_id'] ?>' allow="autoplay" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                             </div>
                         </div>
 
@@ -80,7 +81,7 @@
                             <div class="h-100 d-flex align-items-center justify-content-center text-center">
                                 <div>
                                     <h2 class="mb-2 color-white"><?php echo $item['title'] ?></h2>
-                                    <p class="introduction mb-5"><?php echo $item['introduction'] ?></p>
+                                    <p class="introduction mb-5 px-5"><?php echo $item['introduction'] ?></p>
                                     <a class="link" href="<?php echo $item['link'] ?>"><?php echo $item['button_label'] ?></a>
                                 </div>
                             </div>
