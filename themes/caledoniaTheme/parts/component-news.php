@@ -1,7 +1,9 @@
 <?php     
     $news = get_posts(array(
             'post_type'   => 'news',
-            'posts_per_page' => -1
+            'posts_per_page' => -1,
+            'orderby' => 'menu_order',
+            'order'  => 'ASC'
         )
     );
     $ajaxurl = home_url() . '/wp-admin/admin-ajax.php'; 

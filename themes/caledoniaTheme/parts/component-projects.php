@@ -3,7 +3,9 @@
             'post_type'   => 'projects',
             'posts_per_page' => -1,
             'meta_key'=> 'profile',
-            'meta_value' => 'featured'
+            'meta_value' => 'featured',
+            'orderby' => 'menu_order',
+            'order'  => 'ASC'
         )
     );
     $ajaxurl = home_url() . '/wp-admin/admin-ajax.php'; 

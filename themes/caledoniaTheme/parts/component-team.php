@@ -2,11 +2,12 @@
     /* General arguments */
 	$args = array(
 		'post_type'   => 'people',
-		'posts_per_page' => -1
+        'posts_per_page' => -1,
+        'orderby'        => 'rand'
     );
-    
     $people = get_posts($args);
 ?>
+
 <div class="container" id="team">
 
     <div class="position-relative my-5 pb-5 pb-lg-0">
