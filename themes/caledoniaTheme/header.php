@@ -31,8 +31,8 @@
             <div class="d-flex justify-content-end">
                 <div><a class="open-search"><img src="<?php echo get_bloginfo('template_directory'); ?>/resources/search.svg">Search</a></div>
                 <div class="position-relative">
-                    <div class="show-tooltip"><a href="https://www.caledonia.com/"><img src="<?php echo get_bloginfo('template_directory'); ?>/resources/world.svg">Caledonia.com</a></div>
-                    <div class="tooltip-info">Click here to visit our parent company Caledonia Investments plc.</div>
+                    <!--<div class="show-tooltip"><a href="https://www.caledonia.com/"><img src="<?php echo get_bloginfo('template_directory'); ?>/resources/world.svg">Caledonia.com</a></div>
+                    <div class="tooltip-info">Click here to visit our parent company Caledonia Investments plc.</div>-->
                 </div>
             </div>
         </div>
@@ -169,5 +169,9 @@
 </header>
 
 
-<?php require 'parts/part-search.php'; ?>
+<?php require 'parts/part-search.php';
+
+    
+    
+
 

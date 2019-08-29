@@ -9,6 +9,7 @@
         <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleControls" data-slide-to="1"></li>
         <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+		<li data-target="#carouselExampleControls" data-slide-to="3"></li>
     </ol>
     
     <!-- Slides -->
@@ -26,7 +27,7 @@
                                 <img class="mb-3 play-film open-modal-video" data-vimeo="<?php echo $items[0]['vimeo_id'] ?>" data-file="<?php echo (get_bloginfo('template_directory') . '/' . $items[0]['file'] ) ?>" src="<?php echo get_bloginfo('template_directory'); ?>/resources/play.svg">
                             <?php endif; ?>
                             <h2><?php echo $items[0]['text']?></h2>
-                            <div class="mt-5"><a class="link" href="<?php echo $items[0]['link']?>">Find out more</a></div>
+                            <div class="mt-5"><a class="link" href="<?php echo $items[0]['link']?>"><?php echo $items[0]['link_label']?></a></div>
                         </div>
                                     
                     </div>
@@ -46,7 +47,7 @@
                                 <img class="mb-3 play-film open-modal-video" data-vimeo="<?php echo $items[1]['vimeo_id'] ?>" data-file="<?php echo (get_bloginfo('template_directory') . '/' . $items[1]['file'] ) ?>" src="<?php echo get_bloginfo('template_directory'); ?>/resources/play.svg">
                             <?php endif; ?>
                             <h2><?php echo $items[1]['text']?></h2>
-                            <div class="mt-5"><a class="link" href="<?php echo $items[1]['link']?>">Find out more</a></div>
+                            <div class="mt-5"><a class="link" href="<?php echo $items[1]['link']?>"><?php echo $items[1]['link_label']?></a></div>
                         </div>
 
                     </div>
@@ -66,7 +67,27 @@
                                 <img class="mb-3 play-film open-modal-video" data-vimeo="<?php echo $items[2]['vimeo_id'] ?>" data-file="<?php echo (get_bloginfo('template_directory') . '/' . $items[2]['file'] ) ?>" src="<?php echo get_bloginfo('template_directory'); ?>/resources/play.svg">
                             <?php endif; ?>
                             <h2><?php echo $items[2]['text']?></h2>
-                            <div class="mt-5"><a class="link" href="<?php echo $items[2]['link']?>">Find out more</a></div>
+                            <div class="mt-5"><a class="link" href="<?php echo $items[2]['link']?>"><?php echo $items[2]['link_label']?></a></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		<!-- Fourth slide -->
+        <div class="carousel-item">
+            <div class="d-block w-100 h-100" style="background-image:url('<?php echo $items[3]['image']?>'); background-position: center; background-size: cover"> </div>
+            <div class="layer w-100 h-100">
+                <div class="container h-100 d-flex align-items-center justify-content-center text-center">
+                    <div class="caption">
+
+                        <div class="d-flex flex-column">
+                            <?php if ($items[2]['video_type'] != 'None'): ?>
+                                <img class="mb-3 play-film open-modal-video" data-vimeo="<?php echo $items[3]['vimeo_id'] ?>" data-file="<?php echo (get_bloginfo('template_directory') . '/' . $items[3]['file'] ) ?>" src="<?php echo get_bloginfo('template_directory'); ?>/resources/play.svg">
+                            <?php endif; ?>
+                            <h2><?php echo $items[3]['text']?></h2>
+                            <div class="mt-5"><a class="link" href="<?php echo $items[3]['link']?>"><?php echo $items[3]['link_label']?></a></div>
                         </div>
 
                     </div>

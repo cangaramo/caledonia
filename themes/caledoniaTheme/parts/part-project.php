@@ -21,7 +21,7 @@ else {
 }
 ?>
 
-<div class="col-md-6 col-lg-4 px-1 my-1">
+<div class="col-md-6 col-lg-3 px-1 my-1">
     <div class="project" 
         data-group ='<?php echo $parent ?>'
         data-image='<?php echo $image ?>'
@@ -34,8 +34,8 @@ else {
         data-type_of_investment='<?php echo $type_of_investment?>' 
         data-case_study="<?php echo $case_study_link?>"
         >
-        <div class="w-100 h-100">
-            <img class="w-100 h-100" src="<?php echo $image ?>">
+        <div class="w-100 h-90">
+            <img class="w-100 h-90" src="<?php echo $image ?>">
         </div>
         <div class="green-bar"></div>
     </div>

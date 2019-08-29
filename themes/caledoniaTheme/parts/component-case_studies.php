@@ -22,7 +22,7 @@
                     <a href="<?php echo $permalink ?>"><h4><?php echo $title ?></h4></a>
                     <p><?php echo $description ?></p>
                     <div class="mt-4 pt-2">
-                        <a class="link" href="<?php echo $permalink ?>" target="_blank">Read more</a>
+                        <a class="link" href="<?php echo $permalink ?>">Read more</a>
                     </div>
                 </div>
 
