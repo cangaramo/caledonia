@@ -64,7 +64,7 @@
                             <p class="description"></p>
                             <br>
                         </div>
-                        <div>
+                        <div class="mb-5">
                             <a class="view-cs case_study" href="">View case study</a>
                         </div>
                     </div>

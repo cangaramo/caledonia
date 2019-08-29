@@ -213,7 +213,7 @@ $( document ).ready(function() {
             index = $(project).index(this);
 
             //Move to the right or left
-            if (index == 0 || index%3 == 0) {
+            if (index == 0 || index%4 == 0) {
                 $(container).css('left', '0');
                 $(container).css('right', 'auto');
             }
@@ -224,7 +224,7 @@ $( document ).ready(function() {
 
             //Move up or down
             if ($(window).width() >= 992 ){
-                columns = 3;
+                columns = 4;
             }
             else if ($(window).width() >= 768 ){
                 columns = 2;
@@ -245,7 +245,8 @@ $( document ).ready(function() {
                     row = row - 1;
                 }
 
-                pixels = row * 288;
+                //pixels = row * 288;
+                pixels = row * 216;
                 moveTo = pixels.toString() + 'px';
 
                 $(container).css('top', moveTo);

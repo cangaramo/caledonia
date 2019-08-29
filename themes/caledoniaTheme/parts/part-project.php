@@ -34,8 +34,8 @@ else {
         data-type_of_investment='<?php echo $type_of_investment?>' 
         data-case_study="<?php echo $case_study_link?>"
         >
-        <div class="w-100 h-90">
-            <img class="w-100 h-90" src="<?php echo $image ?>">
+        <div class="w-100 h-100 bg-gray">
+            <img class="mx-auto d-block h-100" src="<?php echo $image ?>">
         </div>
         <div class="green-bar"></div>
     </div>

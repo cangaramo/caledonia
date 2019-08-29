@@ -1,8 +1,12 @@
 @import "variables.scss";
 
 .project{
-    height: 280px;
+    height: 208px;
     position: relative;
+
+    .bg-gray{
+        background:#f3f3f4;
+    }
 
     img {
         -webkit-filter: grayscale(100%); 
@@ -11,6 +15,10 @@
         &:hover {
             -webkit-filter: none;
             filter: none;
+        }
+
+        @media (min-width:992px){
+            width: 100%;
         }
     }
 
