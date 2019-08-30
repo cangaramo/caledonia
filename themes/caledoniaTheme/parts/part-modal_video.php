@@ -5,7 +5,7 @@
 
       <div class="modal-body">
         <div class='embed-container'>
-            <iframe src='https://player.vimeo.com/video/66140585?title=0&byline=0&portrait=0' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            <iframe src='' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
         </div>
       </div>
       
