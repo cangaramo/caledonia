@@ -8,7 +8,17 @@
 
             <div class="d-flex flex-column flex-lg-row">
 
-                <div id="chart"></div>
+                <div class="position-relative">
+                    <div id="chart"></div>
+                    <div class="chart-inside">
+                        <div class="h-100 d-flex justify-content-center align-items-center text-center">
+                            <div>
+                                <p class="num">£751m</p>
+                                <p class="description">Value 31 March 2019</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="info">
                     <div class="line">

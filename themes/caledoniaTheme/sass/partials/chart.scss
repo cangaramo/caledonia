@@ -1,0 +1,73 @@
+@import 'variables.scss';
+
+.chart-container {
+
+    #chart {
+        width:260px; 
+        height: 260px;
+    }
+
+    .info {
+        
+        margin-top: 20px;
+        margin-left: 20px;
+
+        @media (min-width:992px) {
+            margin-left: 70px;
+            margin-top: 10px;
+        }
+
+        .line {
+            margin-top: 3px;
+        }
+
+        .color-key {
+            background: black;
+            width: 25px;
+            height: 18px;
+            display: inline-block;
+            margin-right:15px;
+        }
+    
+        .percentage {
+            margin-right: 10px;
+            width: 40px;
+            height: 18px;
+            display: inline-block;
+
+            span {
+                vertical-align: super;
+                font-size: 14px;
+            }
+        }
+
+        span {
+            vertical-align: super;
+            font-size: 13px;
+        }
+        
+    }
+
+    .chart-inside {
+        position: absolute;
+        top: 0; 
+        height: 260px; 
+        width: 260px;
+
+        p {
+            margin: 0;
+        }
+
+        .num {
+            font-size: 32px;
+            margin-bottom: 8px;
+            color: $purple;
+        }
+
+        .description {
+            font-size: 12px;
+        }
+    }
+
+    
+}
