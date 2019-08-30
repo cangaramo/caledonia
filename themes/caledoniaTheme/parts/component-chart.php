@@ -6,10 +6,14 @@
 
         <div class="col-md-8">
 
+            <h4 class="sector">Sector distribution</h4>
+
             <div class="d-flex flex-column flex-lg-row">
 
                 <div class="position-relative">
+
                     <div id="chart"></div>
+
                     <div class="chart-inside">
                         <div class="h-100 d-flex justify-content-center align-items-center text-center">
                             <div>
@@ -18,6 +22,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 <div class="info">
