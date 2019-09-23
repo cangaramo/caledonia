@@ -260,7 +260,9 @@ function load_news() {
 	$args = array(
 		'post_type'   => 'news',
 		'posts_per_page' => 3,
-		'paged' => $current_page
+		'paged' => $current_page,
+		'orderby' => 'date', 
+		'order'	=> 'DESC'
 	);
 
 	//Main query

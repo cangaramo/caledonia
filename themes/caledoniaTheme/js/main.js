@@ -32,7 +32,7 @@ $( document ).ready(function() {
     });
 
     /* Film */
-    $( ".open-video" ).click(function() {;
+    $( ".open-video" ).click(function() {
 
         var iframe = $('.grid .embed-container iframe');
         player = new Vimeo.Player(iframe);
@@ -46,7 +46,10 @@ $( document ).ready(function() {
         }).catch(function(error) {
             console.log(error.name);
         });
+        
     });
+
+    
 
     /* Team */
     $( ".person" ).click(function() {
@@ -238,10 +241,18 @@ $( document ).ready(function() {
                 //Get row of item
                 row = Math.floor(index / columns);
                 
-                //Last row, place box at the top
+                
                 total = $(project).length - 1;
+
+                //Last row, place box at the top
                 last_row = Math.floor(total / columns);
                 if (row == last_row) {
+                    row = row - 2;
+                }
+
+                //Second to last row, place box at the top
+                second_to_last_row = Math.floor(total / columns) - 1;
+                if ( row == second_to_last_row){
                     row = row - 1;
                 }
 
@@ -269,8 +280,27 @@ $( document ).ready(function() {
         LoadProjects(status);
     });
 
+
+    /* CAROUSEL */
+    
+
+    // Pause carousel if arrows are clicked 
+    $('body').on('click', '.carousel-control-prev-icon', function(){
+        //Pause carousel
+        $('#carouselExampleControls').carousel('pause');
+    });
+
+    $('body').on('click', '.carousel-control-next-icon', function(){
+        //Pause carousel
+        $('#carouselExampleControls').carousel('pause');
+    });
+
+
     /* Open video  */
     $('body').on('click', '.open-modal-video', function(){
+
+        //Pause carousel
+        $('#carouselExampleControls').carousel('pause');
        
         vimeo_id = $(this).data("vimeo");
         file = $(this).data("file");
@@ -287,6 +317,16 @@ $( document ).ready(function() {
             $('#modalFileVideo video')[0].load();
             $('#modalFileVideo video')[0].play();
         }
+    });
+
+    $('#modalVideo').on('hidden.bs.modal', function (e) {
+        var $frame = $('#modalVideo iframe');
+        var vidsrc = $frame.attr('src');
+        $frame.attr('src',''); 
+        $frame.attr('src', vidsrc); 
+        
+        //Play carousel
+        $('#carouselExampleControls').carousel('cycle');
     });
 
     /* View historical investments */
@@ -308,19 +348,41 @@ $( document ).ready(function() {
 
 
      /* News */
+
+     //When loaded
      if ( $( ".news" ).length ) {
-        current_page_news = 1;
+        
+        //Get page from url
+        var currentURL = (window.location.pathname);
+        var num = currentURL.split("/")[3];
+        current_page_news = parseInt(num);
+
+        if (num == null){
+            current_page_news = 1;
+        }
+
         LoadNews(current_page_news);
     }
 
     $('body').on('click', '.prev-article', function(){
+
         current_page_news = current_page_news - 1;
-        LoadNews(current_page_news);
+
+        url = "/news-archive/page/" + current_page_news;
+        window.location.href = url;
+        current_page_news = parseInt(num);
+        
+        //LoadNews(current_page_news);
     });
 
     $('body').on('click', '.next-article', function(){
+
         current_page_news = current_page_news + 1;
-        LoadNews(current_page_news);
+
+        url = "/news-archive/page/" + current_page_news;
+        window.location.href = url;
+        
+        //LoadNews(current_page_news);
     });
 
 
@@ -797,11 +859,11 @@ function LoadChart () {
         .value(function(d) { return d.percentage; });
     
     var data = [
-      {sector: '1', percentage: 29},
-      {sector:'2', percentage: 27},
-      {sector: '3', percentage: 17},
-      {sector: '4', percentage: 17},
-      {sector: '5', percentage: 4},
+      {sector: '1', percentage: 28},
+      {sector:'2', percentage: 25},
+      {sector: '3', percentage: 24},
+      {sector: '4', percentage: 15},
+      {sector: '5', percentage: 3},
       {sector: '6', percentage: 3},
       {sector: '7', percentage: 2},
       {sector: '8', percentage: 1}

@@ -11,7 +11,7 @@
 
 <div class="container my-5 news">
 
-    <h1>News</h1>
+    <h1 class="title-news">News</h1>
 
     <div class="response-news pt-4" data-url="<?php echo $ajaxurl?>"></div>
 

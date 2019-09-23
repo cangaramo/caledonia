@@ -2,98 +2,58 @@
     $items = $values['items'];
 ?>
 <!-- Carousel -->
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="10000">
 
     <!--- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleControls" data-slide-to="1"></li>
-        <li data-target="#carouselExampleControls" data-slide-to="2"></li>
-		<li data-target="#carouselExampleControls" data-slide-to="3"></li>
+
+        <?php foreach ($items as $index=>$item): ?>
+
+            <?php if ($index == 0): ?>
+            <li data-target="#carouselExampleControls" data-slide-to="<?php echo $index ?>" class="active"></li>
+            <?php else: ?>
+            <li data-target="#carouselExampleControls" data-slide-to="<?php echo $index ?>"></li>
+            <?php endif; ?>
+            
+        <?php endforeach ?>
     </ol>
     
     <!-- Slides -->
     <div class="carousel-inner">
 
-        <!-- First slide -->
-        <div class="carousel-item active">
-            <div class="d-block w-100 h-100" style="background-image:url('<?php echo $items[0]['image']?>'); background-position: center; background-size: cover"> </div>
-            <div class="layer w-100 h-100">
-                <div class="container h-100 d-flex align-items-center justify-content-center text-center">
-                    <div class="caption">
+        <?php foreach ($items as $index=>$item): ?>
 
-                        <div class="d-flex flex-column">
-                            <?php if ($items[0]['video_type'] != 'None'): ?>
-                                <img class="mb-3 play-film open-modal-video" data-vimeo="<?php echo $items[0]['vimeo_id'] ?>" data-file="<?php echo (get_bloginfo('template_directory') . '/' . $items[0]['file'] ) ?>" src="<?php echo get_bloginfo('template_directory'); ?>/resources/play.svg">
-                            <?php endif; ?>
-                            <h2><?php echo $items[0]['text']?></h2>
-                            <div class="mt-5"><a class="link" href="<?php echo $items[0]['link']?>"><?php echo $items[0]['link_label']?></a></div>
+            <!-- First slide -->
+            <?php if ($index == 0): ?>
+            <div class="carousel-item active" >
+
+            <?php else: ?>
+            <div class="carousel-item" >
+            <?php endif; ?>
+
+                <div class="d-block w-100 h-100" style="background-image:url('<?php echo $item['image']?>'); background-position: center; background-size: cover"> </div>
+                <div class="layer w-100 h-100">
+                    <div class="container h-100 d-flex align-items-center justify-content-center text-center">
+                        <div class="caption">
+
+                            <div class="d-flex flex-column">
+                                <?php if ($item['video_type'] != 'None'): ?>
+                                    <img class="mb-3 play-film open-modal-video" data-vimeo="<?php echo $item['vimeo_id'] ?>" data-file="<?php echo (get_bloginfo('template_directory') . '/' . $item['file'] ) ?>" src="<?php echo get_bloginfo('template_directory'); ?>/resources/play.svg">
+                                <?php endif; ?>
+                                <h2><?php echo $item['text']?></h2>
+
+                                <?php if ($item['link']): ?>
+                                    <div class="mt-5"><a class="link" href="<?php echo $item['link']?>"><?php echo $item['link_label']?></a></div>
+                                <?php endif ?>
+                                
+                            </div>
+                                        
                         </div>
-                                    
                     </div>
                 </div>
             </div>
-        </div>
-    
-        <!-- Second slide -->
-        <div class="carousel-item">
-            <div class="d-block w-100 h-100" style="background-image:url('<?php echo $items[1]['image']?>'); background-position: center; background-size: cover"> </div>
-            <div class="layer w-100 h-100">
-                <div class="container h-100 d-flex align-items-center justify-content-center text-center">
-                    <div class="caption">
-
-                        <div class="d-flex flex-column">
-                            <?php if ($items[1]['video_type'] != 'None'): ?>
-                                <img class="mb-3 play-film open-modal-video" data-vimeo="<?php echo $items[1]['vimeo_id'] ?>" data-file="<?php echo (get_bloginfo('template_directory') . '/' . $items[1]['file'] ) ?>" src="<?php echo get_bloginfo('template_directory'); ?>/resources/play.svg">
-                            <?php endif; ?>
-                            <h2><?php echo $items[1]['text']?></h2>
-                            <div class="mt-5"><a class="link" href="<?php echo $items[1]['link']?>"><?php echo $items[1]['link_label']?></a></div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Third slide -->
-        <div class="carousel-item">
-            <div class="d-block w-100 h-100" style="background-image:url('<?php echo $items[2]['image']?>'); background-position: center; background-size: cover"> </div>
-            <div class="layer w-100 h-100">
-                <div class="container h-100 d-flex align-items-center justify-content-center text-center">
-                    <div class="caption">
-
-                        <div class="d-flex flex-column">
-                            <?php if ($items[2]['video_type'] != 'None'): ?>
-                                <img class="mb-3 play-film open-modal-video" data-vimeo="<?php echo $items[2]['vimeo_id'] ?>" data-file="<?php echo (get_bloginfo('template_directory') . '/' . $items[2]['file'] ) ?>" src="<?php echo get_bloginfo('template_directory'); ?>/resources/play.svg">
-                            <?php endif; ?>
-                            <h2><?php echo $items[2]['text']?></h2>
-                            <div class="mt-5"><a class="link" href="<?php echo $items[2]['link']?>"><?php echo $items[2]['link_label']?></a></div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-		
-		<!-- Fourth slide -->
-        <div class="carousel-item">
-            <div class="d-block w-100 h-100" style="background-image:url('<?php echo $items[3]['image']?>'); background-position: center; background-size: cover"> </div>
-            <div class="layer w-100 h-100">
-                <div class="container h-100 d-flex align-items-center justify-content-center text-center">
-                    <div class="caption">
-
-                        <div class="d-flex flex-column">
-                            <?php if ($items[2]['video_type'] != 'None'): ?>
-                                <img class="mb-3 play-film open-modal-video" data-vimeo="<?php echo $items[3]['vimeo_id'] ?>" data-file="<?php echo (get_bloginfo('template_directory') . '/' . $items[3]['file'] ) ?>" src="<?php echo get_bloginfo('template_directory'); ?>/resources/play.svg">
-                            <?php endif; ?>
-                            <h2><?php echo $items[3]['text']?></h2>
-                            <div class="mt-5"><a class="link" href="<?php echo $items[3]['link']?>"><?php echo $items[3]['link_label']?></a></div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+        
+        <?php endforeach ?>
 
     </div>
     

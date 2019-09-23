@@ -81,6 +81,7 @@
                         $title = $menuitem->title;
                         $url = $menuitem->url;
                         $id = $menuitem->ID;
+                        $target = $menuitem->target;
 
                         $current_title = get_the_title();
                         if ($current_title == $title) {
@@ -144,7 +145,7 @@
 
                             <!-- Normal item -->
                             <?php else: ?>
-                                <a class="nav-item nav-link <?php echo $class ?>" href="<?php echo $url?>"><span><?php echo $title ?></span></a>
+                                <a class="nav-item nav-link <?php echo $class ?>" href="<?php echo $url?>" target="<?php echo $target ?>"><span><?php echo $title ?></span></a>
                             <?php endif; ?>
                         
                         <?php endif; ?>

@@ -4,6 +4,7 @@
     $values = get_fields();
     $title = get_the_title();
     $id = get_the_ID();
+    $date = get_the_date('d F Y');
     $banner_image = $values['banner_image'];
     $copy = $values['copy'];
 ?>
@@ -24,6 +25,7 @@
             <div class="row px-lg-5 content-article">  
                 <div class="col-lg-4">
                     <h1 class="mb-4"><?php echo $title ?></h1>
+                    <p><?php echo $date ?></p>
                 </div>
                 <div class="col-lg-8">
 

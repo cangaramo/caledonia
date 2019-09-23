@@ -1,7 +1,7 @@
 <?php 
 $title = get_the_title($id);
 $values = get_fields($id);
-$date = get_the_date('d F Y', $id);
+$date = get_the_date('F Y', $id);
 $permalink =  get_the_permalink($id);
 $thumbnail_image = $values['thumbnail_image'];
 $description = $values['description'];

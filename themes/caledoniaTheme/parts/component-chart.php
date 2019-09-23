@@ -28,27 +28,27 @@
                 <div class="info">
                     <div class="line">
                         <div class="color-key" style="background:#00205c"></div>
-                        <div class="percentage"><span>29%</span></div>
+                        <div class="percentage"><span>28%</span></div>
                         <span>Industrial</span>
                     </div>
                     <div class="line">
                         <div class="color-key" style="background:#7a7a7b"></div>
-                        <div class="percentage"><span>27%</span></div>
+                        <div class="percentage"><span>25%</span></div>
                         <span>Consumer services</span>
                     </div>
                     <div class="line">
                         <div class="color-key" style="background:#9dc41a"></div>
-                        <div class="percentage"><span>17%</span></div>
+                        <div class="percentage"><span>24%</span></div>
                         <span>Financial</span>
                     </div>
                     <div class="line">
                         <div class="color-key" style="background:#7184af"></div>
-                        <div class="percentage"><span>17%</span></div>
+                        <div class="percentage"><span>15%</span></div>
                         <span>Diversified holding company</span>
                     </div>
                     <div class="line">
                         <div class="color-key" style="background:#853479"></div>
-                        <div class="percentage"><span>4%</span></div>
+                        <div class="percentage"><span>3%</span></div>
                         <span>Healthcare</span>
                     </div>
                     <div class="line">

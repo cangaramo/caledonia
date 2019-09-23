@@ -14,10 +14,15 @@ h1 {
     font-size: 28px;
 }
 
+h3 {
+    color: $dark_purple;
+}
+
+/*
 p {
     font-size: 14px;
     line-height: 23px;
-}
+}*/
 
 .layer {
     top: 0;
@@ -136,13 +141,20 @@ footer {
 
 
 p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
 
     .current {
         color: $dark_purple;
         font-weight: 500;
     }
+}
+
+ul {
+    font-size: 14px;
+    font-weight: 300;
+    padding-left: 19px;
+    list-style-position: outside;
 }
 
 .item-media {
@@ -218,6 +230,20 @@ p {
             letter-spacing: 0.09px;
             line-height: 28px;
         }
+    }
+}
+
+.text-grid-list {
+
+    p {
+        color: $dark_purple;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    hr {
+        border: 1px solid #e2e2e2;
+        width: 100%;
     }
 }
 

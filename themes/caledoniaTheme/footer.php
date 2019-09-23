@@ -12,9 +12,11 @@ $menuitems = wp_get_nav_menu_items( $menu->term_id, array( 'order' => 'DESC' ) )
             <?php foreach ($menuitems as $index=> $menuitem):
                 $title = $menuitem->title;
                 $url = $menuitem->url;
-                $id = $menuitem->ID; ?>
+                $id = $menuitem->ID; 
+                $target = $menuitem->target;
+                ?>
 
-                <a href="<?php echo $url ?>" class="mx-3 py-1"><?php echo $title ?></a>
+                <a href="<?php echo $url ?>" target="<?php echo $target ?>" class="mx-3 py-1"><?php echo $title ?></a>
 
                 <?php if ($index == 3 ): ?>
                     <img class="mx-3 d-none d-lg-block" src="<?php echo get_bloginfo('template_directory'); ?>/resources/caledonia.svg" alt="Logo">
@@ -30,8 +32,8 @@ $menuitems = wp_get_nav_menu_items( $menu->term_id, array( 'order' => 'DESC' ) )
         </div>
 
         <div class="mt-4 d-flex flex-column flex-lg-row justify-content-center align-items-center footer-menu">
-            <a href="#" class="mx-4">Privacy Policy</a>
-            <a href="#" class="mx-4">Terms and conditions</a>
+            <a href="/privacy-policy" class="mx-4">Privacy Policy</a>
+            <a href="/terms-and-conditions" class="mx-4">Terms and conditions</a>
         </div>
 
     </div>
