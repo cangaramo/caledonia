@@ -22,7 +22,7 @@
             </div>
             <div class="col-lg-4">
                 <p class="m-0"><span class="title">General: </span><a href="mailto:<?php echo $general ?>"><span><?php echo $general ?></span></a></p>
-                <p class="m-0"><span class="title">Team: </span><a href="mailto<?php echo $team ?>"><span><?php echo $team ?></span></a></p>
+                <!-- <p class="m-0"><span class="title">Team: </span><a href="mailto<?php echo $team ?>"><span><?php echo $team ?></span></a></p> -->
             </div>
         </div>
     </div>

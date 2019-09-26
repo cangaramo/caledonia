@@ -68,10 +68,30 @@ $( document ).ready(function() {
         name = $(this).data("name");
         role = $(this).data("role");
         image = $(this).data("image");
+        linkedin = $(this).data("linkedin");
+        twitter = $(this).data("twitter");
+
         $(".info-person-container .bio").html(bio);
         $(".info-person-container h4").text(name);
         $(".info-person-container .role").text(role);
         $(".info-person-container .image").attr("src", image);
+        $(".info-person-container .linkedin a").attr("href", linkedin);
+        $(".info-person-container .twitter a").attr("href", twitter);
+
+        //Hide or show social
+        if (linkedin == "") {
+            $(".info-person-container .linkedin").css("visibility", "hidden");
+        }
+        else {
+            $(".info-person-container .linkedin").css("visibility", "visible");
+        }
+
+        if (twitter == ""){
+            $(".info-person-container .twitter").css("visibility", "hidden");
+        }
+        else {
+            $(".info-person-container .twitter").css("visibility", "visible");
+        }
 
         /* Position */
     
@@ -129,11 +149,16 @@ $( document ).ready(function() {
     /* Projects */
     $('body').on('touchstart click', '.project', function(){
 
+        console.log("project cliked");
+
         parent = $(this).data("group");
         container = "#" + parent + " .info-project-container";
         project = "#" + parent + " .project";
 
-        if (parent == "current-projects") {
+        if (parent == "current-projects" || parent == "historical-projects") {
+
+            console.log (parent);
+
             //Hide if the windows is already open
             if ( $(container).is(':visible') ){
                 $(container).hide();
@@ -247,7 +272,14 @@ $( document ).ready(function() {
                 //Last row, place box at the top
                 last_row = Math.floor(total / columns);
                 if (row == last_row) {
-                    row = row - 2;
+
+                    if (parent == "current-projects"){
+                        row = row - 2;
+                    }
+                    else {
+                        row = row - 1;
+                    }
+                    
                 }
 
                 //Second to last row, place box at the top
@@ -263,7 +295,9 @@ $( document ).ready(function() {
                 $(container).css('top', moveTo);
             }
 
+
             //Show
+            console.log(container);
             $(container).fadeIn("slow");
         }
 

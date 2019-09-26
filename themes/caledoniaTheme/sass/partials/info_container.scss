@@ -130,7 +130,7 @@
             img {
                 width: 20px;
                 height: 20px;
-                margin-right: 12px;
+                margin-left: 12px;
                 vertical-align: sub;
             }
 
@@ -141,6 +141,23 @@
             &:hover {
                 opacity: 0.7;
                 cursor: pointer;
+            }
+        }
+
+        .social {
+            background: #7A7A7A;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+
+            &:hover {
+                background: $purple;
+            }
+
+            .fab {
+                color: #F3F3F4;
+                padding: 11px 13px;
+                font-size: 18px;
             }
         }
     }
