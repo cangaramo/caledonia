@@ -4,7 +4,7 @@
     background: linear-gradient($blue 80%, white 70%);
 
     @media (min-width:992px) {
-        background: linear-gradient($blue 40%, white 30%);
+        background: linear-gradient($blue 60%, white 30%);
     }
 
     h2 {
@@ -55,6 +55,30 @@
             bottom: 22px;
         }
 
+    }
+
+
+    .slick-prev {
+        background-image: url("resources/arrow-prev-white.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        margin-left: -25px;
+    }
+
+    .slick-next { 
+        background-image: url("resources/arrow-next-white.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        margin-right: -25px;
+    }
+
+
+    .slick-prev:before, .slick-next:before {
+        content: none;
     }
     
 }

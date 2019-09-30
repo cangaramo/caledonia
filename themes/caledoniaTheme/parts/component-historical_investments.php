@@ -15,7 +15,7 @@
     </div>
 
     <!-- **  HISTORICAL PROJECTS **  -->
-    <div class="position-relative" id="historical-projects" style="margin-top:110px; margin-bottom:240px">
+    <div class="position-relative my-5" id="historical-projects">
 
         <!-- Grid -->
         <div>
@@ -32,7 +32,7 @@
         <!-- Info project -->
         <div class="info-project-container">
            
-            <div class="info-project content">
+            <div class="info-project info-project-selected content">
 
 
                 <div class="d-flex flex-column">
@@ -87,6 +87,9 @@
                                 <hr>
                                 <p class="title">Board directors</p>
                                 <p class="directors"></p>
+                            </div>
+                            <div class="mb-5">
+                                <a class="view-cs case_study" href="">View case study</a>
                             </div>
                         </div>
 

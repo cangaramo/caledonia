@@ -75,7 +75,7 @@ p {
     height:250px;
 
     @media (min-width:992px) {
-        height:400px;
+        height:425px;
     }
 }
 
@@ -95,7 +95,7 @@ p {
     }
 }
 
-
+@import "partials/carousel_banner.scss";
 @import "partials/content.scss";
 @import "partials/header.scss";
 @import "partials/carousel.scss";
@@ -259,3 +259,22 @@ ul {
 }
 
 @import "partials/chart.scss";
+
+.contact {
+    .social {
+        background: #7A7A7A;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+    
+        &:hover {
+            background: $purple;
+        }
+    
+        .fab {
+            color: #F3F3F4;
+            padding: 10px 11px;
+            font-size: 16px;
+        }
+    }
+}

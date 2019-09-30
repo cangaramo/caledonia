@@ -11,7 +11,15 @@
     $type_investment = $values['type_of_investment'];
     $initial_equity = $values['initial_equity'];
     $copy_image = $values['copy_image'];
-    $case_studies = $values['related_case_studies'];
+   // $case_studies = $values['related_case_studies'];
+    $case_studies = get_posts(array(
+        'post_type'   => 'case_studies',
+        'posts_per_page' => -1,
+       // 'post__not_in' => array($id),
+        'orderby' => 'menu_order',
+        'order'  => 'ASC',
+        )
+    );
 ?>
 			
 	<main>
@@ -83,7 +91,10 @@
         <div class="more-case-studies py-5 mb-5">
             <div class="container">
                 <h2>Case studies </h2>
-                <div class="row">
+
+                <div class="case_studies_slider">
+ 
+
                     <?php foreach ($case_studies as $case_study): 
                         $id = $case_study->ID;
                         $title = get_the_title($id); 
@@ -92,7 +103,7 @@
                         $thumbnail_image = $values['thumbnail_image'];
                         $permalink = get_the_permalink($id);
                         ?>
-                        <div class="col-lg-4 my-3 my-lg-0">
+                        <div class="px-3 pb-5">
                             <div class="box p-4">
                                 <div class="thumbnail-image" style="background-image: url(<?php echo $thumbnail_image ?>)"></div>
                                 <h4><?php echo $title ?></h4>
@@ -101,7 +112,10 @@
                             </div>
                         </div>
                     <?php endforeach ?> 
+
                 </div>
+
+                
             </div>
         </div>
 

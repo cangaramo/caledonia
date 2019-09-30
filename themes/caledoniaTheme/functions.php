@@ -218,8 +218,25 @@ function load_projects() {
 
 	/* Status */
 	if ($status != "all") {
-		$args['meta_key'] = 'realised_status';
-		$args['meta_value'] = $status;
+
+		$args['meta_query'] = array(
+			'relation'		=> 'AND',
+			array(
+				'key'	 	=> 'realised_status',
+				'value'	  	=> $status,
+				'compare' 	=> '='
+			),
+			array(
+				'key'	  	=> 'profile',
+				'value'	  	=> 'featured',
+				'compare' 	=> '='
+			)
+		);
+	}
+
+	else {
+		$args['meta_key'] = 'profile';
+		$args['meta_value'] = 'featured';
 	}
 
 	//Main query

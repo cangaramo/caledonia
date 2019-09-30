@@ -7,7 +7,33 @@ $( document ).ready(function() {
     // Count up
     $('.counter').counterUp({
         delay: 10,
-        time: 2000
+        time: 2000,
+    });
+
+    //Slick
+    $('.case_studies_slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        speed: 500,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
+                }
+              },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
     });
 
     /* Search */
@@ -147,7 +173,8 @@ $( document ).ready(function() {
 
 
     /* Projects */
-    $('body').on('touchstart click', '.project', function(){
+    $('body').on('click', '.project', function(){
+    //$('body').on('touchstart click', '.project', function(){
 
         console.log("project cliked");
 
@@ -266,29 +293,32 @@ $( document ).ready(function() {
                 //Get row of item
                 row = Math.floor(index / columns);
                 
-                
                 total = $(project).length - 1;
 
-                //Last row, place box at the top
-                last_row = Math.floor(total / columns);
-                if (row == last_row) {
+                //Current project
+                if (parent == "current-projects") {
 
-                    if (parent == "current-projects"){
+                    //Last row, place box at the top
+                    last_row = Math.floor(total / columns);
+                    if (row == last_row) {
                         row = row - 2;
                     }
-                    else {
+
+                    //Second to last row, place box at the top
+                    second_to_last_row = Math.floor(total / columns) - 1;
+                    if ( row == second_to_last_row){
                         row = row - 1;
                     }
-                    
+
+                }
+                //Selected projects
+                else {
+                    last_row = Math.floor(total / columns);
+                    if (row == last_row) {
+                        row = row - 1;
+                    }
                 }
 
-                //Second to last row, place box at the top
-                second_to_last_row = Math.floor(total / columns) - 1;
-                if ( row == second_to_last_row){
-                    row = row - 1;
-                }
-
-                //pixels = row * 288;
                 pixels = row * 216;
                 moveTo = pixels.toString() + 'px';
 
@@ -297,7 +327,6 @@ $( document ).ready(function() {
 
 
             //Show
-            console.log(container);
             $(container).fadeIn("slow");
         }
 

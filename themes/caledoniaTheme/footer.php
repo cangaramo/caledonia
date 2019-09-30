@@ -27,7 +27,7 @@ $menuitems = wp_get_nav_menu_items( $menu->term_id, array( 'order' => 'DESC' ) )
 
         <div class="mt-5 d-flex flex-column flex-lg-row justify-content-center align-items-center footer-menu">
             <p class="mx-4">Tel: <a href="tel:+44 20 7802 8080">+44 20 7802 8080</a></p>
-            <p class="mx-4">Email: <a href="mailto:enquiries@caledonia.com">enquiries@caledonia.com</a></p>
+            <p class="mx-4">Email: <a href="mailto:privatecapital@caledonia.com">privatecapital@caledonia.com</a></p>
             <p class="mx-4">© 2019 Caledonia Investments plc.</p>
         </div>
 
@@ -61,6 +61,9 @@ $menuitems = wp_get_nav_menu_items( $menu->term_id, array( 'order' => 'DESC' ) )
 
 <!-- Vimeo -->
 <script src="https://player.vimeo.com/api/player.js"></script>
+
+<!-- Slick -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <!-- Main js -->
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/main.js"></script>

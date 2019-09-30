@@ -1,0 +1,61 @@
+#carouselBanner {
+
+    .video {
+
+        margin-top:70px;
+
+        @media (min-width: 992px) {
+            margin-top:170px
+        }
+
+        h2 {
+            font-size: 1.5rem;
+
+            @media (min-width: 992px) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .carousel-control-prev-icon {
+        background-image: url("resources/arrow-prev-white.png");
+        width: 30px;
+        height: 30px;
+        background-size: 100%;
+        display: none;
+        margin-top: 100px;
+
+        @media (min-width: 1200px) {
+            display: block;
+        }
+    }
+
+    .carousel-control-next-icon{
+        background-image: url("resources/arrow-next-white.png");
+        width: 30px;
+        height: 30px;
+        background-size: 100%;
+        display: none;
+        margin-top: 100px;
+
+        @media (min-width: 1200px) {
+            display: block;
+        }
+    }
+
+    .carousel-indicators {
+        z-index: 9;
+    }
+    .carousel-indicators li{
+        width: 10px;
+        height: 10px;
+        margin: 4px;
+        border-radius: 50%;
+        border: 1px solid white;
+        background: transparent;
+    }
+
+    .carousel-indicators li.active{
+        background: white;
+    }
+}

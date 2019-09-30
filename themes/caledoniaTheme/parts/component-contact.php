@@ -6,7 +6,7 @@
     $team = $values['team'];
 ?>
 
-<div class="container my-5">
+<div class="container contact my-5">
     <h1>Contact</h1>
 
     <div class="content my-4">
@@ -22,8 +22,13 @@
             </div>
             <div class="col-lg-4">
                 <p class="m-0"><span class="title">General: </span><a href="mailto:<?php echo $general ?>"><span><?php echo $general ?></span></a></p>
+                <div class="d-flex mt-3">
+                    <div class="social mr-3 linkedin"><a href="https://www.linkedin.com/company/caledonia-private-capital" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
+                    <div class="social twitter"><a href="https://twitter.com/caledonia_pc" target="_blank"><i class="fab fa-twitter"></i></a></div>
+                </div>
                 <!-- <p class="m-0"><span class="title">Team: </span><a href="mailto<?php echo $team ?>"><span><?php echo $team ?></span></a></p> -->
             </div>
+
         </div>
     </div>
 

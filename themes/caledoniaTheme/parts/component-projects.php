@@ -71,7 +71,7 @@
                                 <p class="description"></p>
                                 <br>
                             </div>
-                            <div class="mb-5">
+                            <div class="mb-5 d-none d-lg-block">
                                 <a class="view-cs case_study" href="">View case study</a>
                             </div>
                         </div>
@@ -94,6 +94,9 @@
                                 <hr>
                                 <p class="title">Board directors</p>
                                 <p class="directors"></p>
+                            </div>
+                            <div class="mt-3 d-block d-lg-none">
+                                <a class="view-cs case_study" href="">View case study</a>
                             </div>
                         </div>
 

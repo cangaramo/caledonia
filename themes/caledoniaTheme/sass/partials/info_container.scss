@@ -42,6 +42,23 @@
         }
     }
 
+    .info-project-selected {
+        height: 432px !important;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            height: 432px !important;
+        }
+
+        @media (min-width: 992px) {
+            width: 695px;
+        }
+    
+        @media (min-width: 1200px) {
+            width: 830px;
+        }
+    }
+
     .info-person, .info-project{
         border: 3px solid white;   
         background: #F3F3F4; 
@@ -71,13 +88,13 @@
             max-height: 100px;
             width: auto;
             height: auto;
-            margin-bottom: 20px;
-
+            
             @media (min-width: 768px) {
                 height: auto;
                 width: 100%;
                 max-width: none;
                 max-height: none;
+                margin-bottom: 20px;
             }
             
         }
