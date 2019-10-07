@@ -85,25 +85,43 @@ function load_modal(){
 		$role = get_field('role', $id);
 		$bio = get_field('bio', $id);
 		$image = get_field('image', $id);
-		
+		$linkedin = get_field('linkedin', $id);
+		$twitter = get_field('twitter', $id);
 		?>
 	
 		<div class="info-person-modal">
             <div class="content info-person content">
 
-				<a class="close-person" data-dismiss="modal"><img src="<?php echo get_bloginfo('template_directory'); ?>/resources/close-green.svg">Close window</a>
-				
-				<div class="row mt-3 pt-2">
-					<div class="col-md-6">
-						<img class="image" src="<?php echo $image ?>" />
-					</div>
+				<div class="d-flex flex-column">
+
+					<div class="text-right">
+                        <a class="close-person" data-dismiss="modal">Close window<img src="<?php echo get_bloginfo('template_directory'); ?>/resources/close-green.svg"></a>
+                    </div>
 					
-					<div class="col-md-6">
-						<hr class="mb-4">
-						<h4 class="name"><?php echo $name ?></h4>
-						<p class="role"><?php echo $role ?></p>
-						<div class="bio"><?php echo $bio ?></div>
+					<div class="row mt-3 pt-2">
+						<div class="col-md-6">
+							<img class="image" src="<?php echo $image ?>" />
+						</div>
+						
+						<div class="col-md-6">
+							<hr class="mb-4">
+							<h4 class="name"><?php echo $name ?></h4>
+							<p class="role"><?php echo $role ?></p>
+							<div class="bio"><?php echo $bio ?></div>
+							<div class="d-flex">
+
+								<?php if ($linkedin): ?>
+                                	<div class="social mr-3 linkedin"><a href="<?php echo $linkedin ?>" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
+								<?php endif ?>
+
+								<?php if ($twitter): ?>
+                                	<div class="social twitter"><a href="<?php echo $twitter ?>" target="_blank"><i class="fab fa-twitter"></i></a></div>
+								<?php endif ?>
+
+                            </div>
+						</div>
 					</div>
+				
 				</div>
 
 			</div>
@@ -130,72 +148,79 @@ function load_modal(){
 		<div class="info-project-modal">
             <div class="content info-project content">
 
-				<a class="close-project" data-dismiss="modal"><img src="<?php echo get_bloginfo('template_directory'); ?>/resources/close-green.svg">Close window</a>
-                
-                <div class="row mt-3 pt-lg-2">
-                    <div class="col-md-4">
-                        <img class="image logo" src="<?php echo $logo ?>" />
-                    </div>
-                    <div class="col-md-4">
-						<?php if ($investment) :?>
-							<div class="investment-box">
-								<hr>
-								<p class="title">Date of investment</p>
-								<p class="investment"><?php echo $investment ?></p>
-								<br>
-							</div>
-						<?php endif; ?>
-						<?php if ($status) :?>
-							<div class="status-box">
-								<hr>
-								<p class="title">Realised status</p>
-								<p class="status"><?php echo $status ?></p>
-								<br>
-							</div>
-						<?php endif; ?>
-						<?php if ($description) :?>
-							<div class="description-box">
-								<hr>
-								<p class="title">Description</p>
-								<p class="description"><?php echo $description ?></p>
-								<br>
-							</div>
-						<?php endif; ?>
-						<?php if ($case_study_link) :?>
-							<div>
-								<a class="view-cs case_study" href="<?php echo $case_study_link ?>">View case study</a>
-							</div>
-						<?php endif; ?>
-                    </div>
-                    <div class="col-md-4">
-						<?php if ($number) :?>
-							<div class="equity-box">
-								<hr>
-								<p class="title">Caledonia equity</p>
-								<p class="equity">
-								<span class="symbol"><?php echo $symbol?></span><span class="num"><?php echo $number ?></span><span class="value"><?php echo $value ?></span>
-								</p>
-								<br>
-							</div>
-						<?php endif; ?>
-						<?php if ($type_of_investment) :?>
-							<div class="type_of_investment-box">
-								<hr>
-								<p class="title">Type of investment</p>
-								<p class="type_of_investment"><?php echo $type_of_investment ?></p>
-								<br>
-							</div>
-						<?php endif; ?>
-						<?php if ($directors) :?>
-							<div class="directors-box">
-								<hr>
-								<p class="title">Board directors</p>
-								<p class="directors"><?php echo $directors ?></p>
-							</div>
-						<?php endif; ?>
-                    </div>
+				<div class="d-flex flex-column">
 
-				</div> <!-- row -->
+					<div class="text-right mb-3">
+                        <a class="close-person" data-dismiss="modal">Close window<img src="<?php echo get_bloginfo('template_directory'); ?>/resources/close-green.svg"></a>
+                    </div>
+                
+					<div class="row mt-3 pt-lg-2">
+						<div class="col-md-4">
+							<img class="image logo" src="<?php echo $logo ?>" />
+						</div>
+						<div class="col-md-4">
+							<?php if ($investment) :?>
+								<div class="investment-box">
+									<hr>
+									<p class="title">Date of investment</p>
+									<p class="investment"><?php echo $investment ?></p>
+									<br>
+								</div>
+							<?php endif; ?>
+							<?php if ($status) :?>
+								<div class="status-box">
+									<hr>
+									<p class="title">Realised status</p>
+									<p class="status"><?php echo $status ?></p>
+									<br>
+								</div>
+							<?php endif; ?>
+							<?php if ($description) :?>
+								<div class="description-box">
+									<hr>
+									<p class="title">Description</p>
+									<p class="description"><?php echo $description ?></p>
+									<br>
+								</div>
+							<?php endif; ?>
+							<?php if ($case_study_link) :?>
+								<div>
+									<a class="view-cs case_study" href="<?php echo $case_study_link ?>">View case study</a>
+								</div>
+							<?php endif; ?>
+						</div>
+						<div class="col-md-4">
+							<?php if ($number) :?>
+								<div class="equity-box">
+									<hr>
+									<p class="title">Caledonia equity</p>
+									<p class="equity">
+									<span class="symbol"><?php echo $symbol?></span><span class="num"><?php echo $number ?></span><span class="value"><?php echo $value ?></span>
+									</p>
+									<br>
+								</div>
+							<?php endif; ?>
+							<?php if ($type_of_investment) :?>
+								<div class="type_of_investment-box">
+									<hr>
+									<p class="title">Type of investment</p>
+									<p class="type_of_investment"><?php echo $type_of_investment ?></p>
+									<br>
+								</div>
+							<?php endif; ?>
+							<?php if ($directors) :?>
+								<div class="directors-box">
+									<hr>
+									<p class="title">Board directors</p>
+									<p class="directors"><?php echo $directors ?></p>
+								</div>
+							<?php endif; ?>
+						</div>
+
+					</div> <!-- row -->
+
+				</div>
+
 			</div>
 		</div>
 	<?php }

@@ -35,7 +35,7 @@
                                 <div class="h-100 d-flex align-items-center justify-content-center text-center">
                                     <div>
                                         <img class="my-3 play-film open-video" src="<?php echo get_bloginfo('template_directory'); ?>/resources/play.svg">
-                                        <h2 class="mb-4 pb-md-3 color-white overview">Overview film</h2>
+                                        <h2 class="mb-4 pb-md-3 color-white overview"><?php echo $item['video_title'] ?></h2>
                                         <a class="link open-video">Watch film</a>
                                     </div>
                                 </div>

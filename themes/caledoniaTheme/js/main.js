@@ -18,19 +18,24 @@ $( document ).ready(function() {
         arrows: true,
         speed: 500,
         autoplay: true,
+        dots: false,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
                   slidesToShow: 2,
                   slidesToScroll: 2,
+                  dots: true,
+                  arrows: false,
                 }
               },
             {
               breakpoint: 768,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false,
               }
             }
         ]

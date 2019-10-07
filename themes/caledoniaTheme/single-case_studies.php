@@ -6,6 +6,7 @@
     $id = get_the_ID();
     $banner_image = $values['banner_image'];
     $vimeo_id = $values['vimeo_id'];
+    $video_title = $values['video_title'];
     $description = $values['description'];
     $investment_thesis = $values['investment_thesis'];
     $type_investment = $values['type_of_investment'];
@@ -34,8 +35,8 @@
                             <div class="h-100 d-flex justify-content-center align-items-center text-center">
                                 <div class="pt-5">
                                     <img class="my-3 play-film open-modal-video" data-vimeo="<?php echo $vimeo_id ?>" src="<?php echo get_bloginfo('template_directory'); ?>/resources/play.svg">
-                                    <h2 class="mb-4 pb-3 color-white">Overview film</h2>
-                                    <a class="link open-modal-video" data-vimeo="<?php echo $vimeo_id ?>" >Watch film</a>
+                                    <h2 class="mb-4 pb-3 color-white"><?php echo $video_title ?></h2>
+                                    <a class="link open-modal-video d-none d-lg-inline-block" data-vimeo="<?php echo $vimeo_id ?>" >Watch film</a>
                                 </div>
                             </div>
                         </div>

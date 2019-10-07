@@ -80,5 +80,9 @@
     .slick-prev:before, .slick-next:before {
         content: none;
     }
+
+    .slick-dots li {
+        margin: 0 3px; 
+    }
     
 }
