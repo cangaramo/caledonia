@@ -896,18 +896,20 @@ function checkChartPosition () {
         
     if (visible ) {
 
-        console.log("visible");
-
         if ( $('#chart').children().length > 0 ) {
         }
         else {
-            console.log("load chart");
             LoadChart ();
         }
     }
 }
 
 function LoadChart () {
+
+    //get percetanges here
+    percs = $("#chart").data("percentages");
+    console.log(percs);
+
     var width = 260,
     height = 260,
     offset = 0,
@@ -927,14 +929,14 @@ function LoadChart () {
         .value(function(d) { return d.percentage; });
     
     var data = [
-      {sector: '1', percentage: 28},
-      {sector:'2', percentage: 25},
-      {sector: '3', percentage: 24},
-      {sector: '4', percentage: 15},
-      {sector: '5', percentage: 3},
-      {sector: '6', percentage: 3},
-      {sector: '7', percentage: 2},
-      {sector: '8', percentage: 1}
+      {sector: '1', percentage: parseInt(percs[0]) },
+      {sector:'2', percentage:  parseInt(percs[1])},
+      {sector: '3', percentage:  parseInt(percs[2])},
+      {sector: '4', percentage:  parseInt(percs[3])},
+      {sector: '5', percentage:  parseInt(percs[4])},
+      {sector: '6', percentage:  parseInt(percs[5])},
+      {sector: '7', percentage:  parseInt(percs[6])},
+      {sector: '8', percentage:  parseInt(percs[7])}
     ];
     
     var svg = d3.select("#chart").append("svg")
