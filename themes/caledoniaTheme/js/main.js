@@ -938,7 +938,9 @@ function LoadChart () {
       {sector: '7', percentage:  parseInt(percs[6])},
       {sector: '8', percentage:  parseInt(percs[7])}
     ];
-    
+
+    console.log("remove spacing");
+
     var svg = d3.select("#chart").append("svg")
         .attr("id", "chart")
         .attr("width", width + offset)
@@ -971,6 +973,5 @@ function LoadChart () {
      data.forEach(function(d) {
             d.songs = +d.songs;
     });
-
 
 }
